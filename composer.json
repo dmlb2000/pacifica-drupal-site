@@ -9,12 +9,28 @@
             "role": ""
         }
     ],
-    "repositories": [
-        {
+    "repositories": {
+        "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "pacifica_content": {
+            "type": "vcs",
+            "url": "https://github.com/pacifica/pacifica-drupal-module-content"
+        },
+        "pacifica_consumer": {
+            "type": "vcs",
+            "url": "https://github.com/pacifica/pacifica-drupal-module-consumer"
+        },
+        "pacifica_api": {
+            "type": "vcs",
+            "url": "https://github.com/pacifica/pacifica-drupal-module-api"
+        },
+        "pacifica_theme": {
+            "type": "vcs",
+            "url": "https://github.com/pacifica/pacifica-drupal-theme"
         }
-    ],
+    },
     "require": {
         "php": ">=5.6",
         "composer/installers": "^1.2",
@@ -22,6 +38,10 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.0",
+        "drupal/pacifica_content": "dev-8.x-1.x",
+        "drupal/pacifica_api": "dev-8.x-1.x",
+        "drupal/pacifica_consumer": "dev-8.x-1.x",
+        "drupal/pacifica_theme": "dev-8.x-1.x",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
@@ -43,7 +63,9 @@
         "classmap": [
             "scripts/composer/ScriptHandler.php"
         ],
-        "files": ["load.environment.php"]
+        "files": [
+            "load.environment.php"
+        ]
     },
     "scripts": {
         "pre-install-cmd": [
@@ -65,12 +87,24 @@
             "drupal/core": "-p2"
         },
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/{$name}": ["type:drupal-drush"]
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ]
         },
         "drupal-scaffold": {
             "initial": {
