@@ -15,19 +15,19 @@
             "url": "https://packages.drupal.org/8"
         },
         "pacifica_content": {
-            "type": "vcs",
-            "url": "https://github.com/pacifica/pacifica-drupal-module-content"
+            "type": "git",
+            "url": "https://github.com/pacifica/pacifica-drupal-module-search"
         },
         "pacifica_consumer": {
-            "type": "vcs",
-            "url": "https://github.com/pacifica/pacifica-drupal-module-consumer"
+            "type": "git",
+            "url": "https://github.com/pacifica/pacifica-drupal-module-uploader"
         },
         "pacifica_api": {
-            "type": "vcs",
-            "url": "https://github.com/pacifica/pacifica-drupal-module-api"
+            "type": "git",
+            "url": "https://github.com/pacifica/pacifica-drupal-module-downloader"
         },
         "pacifica_theme": {
-            "type": "vcs",
+            "type": "git",
             "url": "https://github.com/pacifica/pacifica-drupal-theme"
         }
     },
@@ -38,9 +38,9 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.0",
-        "drupal/pacifica_content": "dev-8.x-1.x",
-        "drupal/pacifica_api": "dev-8.x-1.x",
-        "drupal/pacifica_consumer": "dev-8.x-1.x",
+        "drupal/pacifica_search": "dev-8.x-1.x",
+        "drupal/pacifica_uploader": "dev-8.x-1.x",
+        "drupal/pacifica_downloader": "dev-8.x-1.x",
         "drupal/pacifica_theme": "dev-8.x-1.x",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
